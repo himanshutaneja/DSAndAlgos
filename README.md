@@ -1,6 +1,6 @@
 # DSAndAlgos
 
-This repo contains Chrome Devtools Code Snippets exported in a JSON format.
+This repo contains Chrome Devtools Code Snippets for various different Data Structures and Algorithms implemented in JavaScript.
 
 In order to import the JSON formatted snippets into Chrome, open DevTools of DevTools (Ctrl + Shift + i) and execute below lines of code in console.
 
