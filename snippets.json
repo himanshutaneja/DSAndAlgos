@@ -2,5 +2,9 @@
   {
     "name": "FrequencyCounterPattern",
     "content": "function isSquaredArray(arr1, arr2) {\n    \n    if (arr1.length !==  arr2.length) {\n        return false;\n    }\n\n    var frequencyCounter1 = {};\n    var frequencyCounter2 = {};\n\n    for (var val of arr1) {\n        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;\n    }\n\n    for (var val of arr2) {\n        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;\n    }\n\n    for (var key in frequencyCounter1) {\n        if (!(key ** 2 in frequencyCounter2)) {\n            return false;\n        }\n\n        if (frequencyCounter1[key] !== frequencyCounter2[key ** 2]) {\n            return false;\n        }\n    }\n    \n    return true;\n}\n\nconsole.log(isSquaredArray([1, 3, 2, 1, 5], [9, 1, 4, 1]))\nconsole.log(isSquaredArray([1, 3, 2, 1, 5], [9, 1, 4, 25]))\nconsole.log(isSquaredArray([], []))\nconsole.log(isSquaredArray([1, 3, 2, 1, 5], [9, 1, 4, 1, 25]))\n\n"
+  },
+  {
+    "name": "FrequencyCounterAnagram",
+    "content": "function isAnagram(str1, str2) {\n    \n    if (str1.length !== str2.length) {\n        return false;\n    }\n\n    var freqCounter1 = {};\n    var freqCounter2 = {};\n\n    for (var ch of str1) {\n        ch = ch.toLowerCase();\n        freqCounter1[ch] = (freqCounter1[ch] || 0) + 1;\n    }\n    \n    for (var ch of str2) {\n        ch = ch.toLowerCase();\n        freqCounter2[ch] = (freqCounter2[ch] || 0) + 1;\n    }\n\n    for (var key in freqCounter1) {\n        if (freqCounter1[key] !== freqCounter2[key]) {\n            return false;\n        }\n    }\n\n    return true;\n}\n\nconsole.log(isAnagram(\"london\", \"nodlon\"))\nconsole.log(isAnagram(\"london\", \"nodlo\"))\nconsole.log(isAnagram(\"Listen\", \"Silent\"))"
   }
 ]
